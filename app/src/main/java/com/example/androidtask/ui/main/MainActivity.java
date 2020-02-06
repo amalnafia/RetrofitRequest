@@ -4,31 +4,19 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidtask.R;
-import com.example.androidtask.model.Employee;
-import com.example.androidtask.model.JobResponse;
-import com.example.androidtask.model.Request;
-import com.example.androidtask.model.RequestHeader;
-import com.example.androidtask.rest.ApiInterface;
-import com.example.androidtask.rest.ServiceGenerator;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+
+    //get data from viewmodel "getEmployees" and observe of data status
+
     static final String TAG = MainActivity.class.getSimpleName();
     EmployeeViewModel employeeViewModel;
 
@@ -47,7 +35,21 @@ public class MainActivity extends AppCompatActivity {
         main_recyclerview.setLayoutManager(new LinearLayoutManager(this));
         mainAdapter = new MainAdapter(getApplicationContext());
         main_recyclerview.setAdapter(mainAdapter);
-        employeeViewModel.getEmployees();
-        employeeViewModel.employeeMutableLiveData.observe(this, employees -> mainAdapter.setEmployees(employees));
+        employeeViewModel.setEmployeeMediatorLiveData();
+        employeeViewModel.getEmployees().observe(this, employees -> {
+            switch (employees.getResponseStatus()) {
+                case ERROR:
+
+                    Log.e(TAG, "onCreate: " + employees.getMessage());
+                    break;
+                case FAILED:
+                    break;
+                case LOADING:
+                    break;
+                case SUCCESS:
+                    mainAdapter.setEmployees(employees.getData());
+                    break;
+            }
+        });
     }
 }

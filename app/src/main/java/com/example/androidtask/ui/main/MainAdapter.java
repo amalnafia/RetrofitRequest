@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.androidtask.R;
-import com.example.androidtask.model.Employee;
+import com.example.androidtask.model.EmployeeData;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,13 +24,13 @@ import butterknife.ButterKnife;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     private Context context;
-    private List<Employee> employees;
+    private List<EmployeeData> employees;
 
     public MainAdapter(Context context) {
         this.context = context;
     }
 
-    public void setEmployees(List<Employee> employees) {
+    public void setEmployees(List<EmployeeData> employees) {
         this.employees = employees;
         notifyDataSetChanged();
     }
@@ -45,7 +45,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final MainAdapter.ViewHolder holder, int position) {
-        final Employee employee = employees.get(position);
+        final EmployeeData employee = employees.get(position);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

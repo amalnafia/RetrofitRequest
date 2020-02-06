@@ -1,61 +1,46 @@
-
 package com.example.androidtask.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class RequestHeader {
-
-    @SerializedName("appLanguage")
-    @Expose
-    private int appLanguage;
-    @SerializedName("appversion")
-    @Expose
-    private String appversion;
-    @SerializedName("countryId")
-    @Expose
-    private int countryId;
-    @SerializedName("currencyId")
-    @Expose
-    private int currencyId;
-    @SerializedName("deviceSerial")
-    @Expose
-    private String deviceSerial;
-    @SerializedName("deviceType")
-    @Expose
-    private int deviceType;
-    @SerializedName("ip")
-    @Expose
-    private String ip;
-    @SerializedName("isWeb")
-    @Expose
-    private Boolean isWeb;
-    @SerializedName("notificationToken")
-    @Expose
-    private String notificationToken;
-    @SerializedName("osversion")
-    @Expose
-    private String osversion;
-    @SerializedName("userId")
-    @Expose
-    private int userId;
     @SerializedName("userType")
-    @Expose
     private int userType;
+    @SerializedName("userId")
+    private int userId;
+    @SerializedName("osversion")
+    private String osversion;
+    @SerializedName("notificationToken")
+    private String notificationToken;
+    @SerializedName("isWeb")
+    private boolean isWeb;
+    @SerializedName("ip")
+    private String ip;
+    @SerializedName("deviceType")
+    private int deviceType;
+    @SerializedName("deviceSerial")
+    private String deviceSerial;
+    @SerializedName("currencyId")
+    private int currencyId;
+    @SerializedName("countryId")
+    private int countryId;
+    @SerializedName("appversion")
+    private String appversion;
+    @SerializedName("appLanguage")
+    private int appLanguage;
 
-    public RequestHeader(int appLanguage, String appversion, int countryId, int currencyId, String deviceSerial, int deviceType,
-                         String ip, Boolean isWeb, String notificationToken, String osversion, int userId, int userType) {
-        this.appLanguage = appLanguage;
-        this.appversion = appversion;
-        this.countryId = countryId;
-        this.currencyId = currencyId;
-        this.deviceSerial = deviceSerial;
-        this.deviceType = deviceType;
-        this.ip = ip;
-        this.isWeb = isWeb;
-        this.notificationToken = notificationToken;
-        this.osversion = osversion;
-        this.userId = userId;
+    public RequestHeader(int userType, int userId, String osversion, String notificationToken, boolean isWeb, String ip, int deviceType,
+                         String deviceSerial, int currencyId, int countryId, String appversion, int appLanguage) {
         this.userType = userType;
+        this.userId = userId;
+        this.osversion = osversion;
+        this.notificationToken = notificationToken;
+        this.isWeb = isWeb;
+        this.ip = ip;
+        this.deviceType = deviceType;
+        this.deviceSerial = deviceSerial;
+        this.currencyId = currencyId;
+        this.countryId = countryId;
+        this.appversion = appversion;
+        this.appLanguage = appLanguage;
     }
 }
