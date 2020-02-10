@@ -18,7 +18,8 @@
     <dimen name="text_size_20">18sp</dimen>
     <dimen name="text_size_19">17sp</dimen>
     <dimen name="text_size_17">15sp</dimen>
-    <dimen name="text_size_13">13sp</dimen>
-    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">12sp</dimen>
+    <dimen name="text_size_12">11sp</dimen>
+    <dimen name="margin_start_17">15dp</dimen>
 
 </resources>

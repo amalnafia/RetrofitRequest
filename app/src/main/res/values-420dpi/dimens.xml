@@ -14,11 +14,12 @@
 
     <dimen name="text_size_21">25sp</dimen>
     <dimen name="text_size_20">24sp</dimen>
-    <dimen name="text_size_19">23sp</dimen>
-    <dimen name="text_size_17">21sp</dimen>
+    <dimen name="text_size_19">20sp</dimen>
+    <dimen name="text_size_17">18sp</dimen>
     <dimen name="text_size_13">17sp</dimen>
     <dimen name="text_size_12">16sp</dimen>
     <dimen name="margin_end_21">21dp</dimen>
+    <dimen name="margin_start_17">17dp</dimen>
 
 
 </resources>

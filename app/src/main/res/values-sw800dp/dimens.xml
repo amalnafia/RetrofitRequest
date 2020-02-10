@@ -18,4 +18,5 @@
     <dimen name="margin_start_39">39dp</dimen>
     <dimen name="margin_start_15">15dp</dimen>
     <dimen name="margin_end_21">21dp</dimen>
+    <dimen name="margin_start_17">17dp</dimen>
 </resources>
