@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidTask</string>
+    <string name="job_description">Lorem ipsum dolor sit amet, consect
+    adipiscing elit. Aenean eu vehicula sem,
+    vel condimentum sapien.
+        Sed et fermentum tortor, id aliquet ex.</string>
+    
+    <string name="skills">
+        Lorem ipsum dolor sit amet, consect
+adipiscing elit. Aenean eu vehicula
+    </string>
 </resources>

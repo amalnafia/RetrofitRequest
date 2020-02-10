@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_start_30">38dp</dimen>
+    <dimen name="margin_top_30">38dp</dimen>
+
+    <dimen name="margin_top_7">15dp</dimen>
+    <dimen name="margin_top_10">18dp</dimen>
+    <dimen name="margin_top_26">34dp</dimen>
+    <dimen name="margin_top_36">44dp</dimen>
+
+    <dimen name="text_size_21">29sp</dimen>
+    <dimen name="text_size_20">28sp</dimen>
+    <dimen name="text_size_19">27sp</dimen>
+    <dimen name="text_size_17">25sp</dimen>
+    <dimen name="text_size_13">21sp</dimen>
+    <dimen name="text_size_12">20sp</dimen>
+    <dimen name="margin_top_20">20dp</dimen>
+    <dimen name="margin_start_39">39dp</dimen>
+    <dimen name="margin_start_15">15dp</dimen>
+    <dimen name="margin_end_21">21dp</dimen>
+</resources>

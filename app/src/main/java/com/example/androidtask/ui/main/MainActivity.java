@@ -1,5 +1,6 @@
 package com.example.androidtask.ui.main;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -24,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView main_recyclerview;
 
     private MainAdapter mainAdapter;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        progressDialog = new ProgressDialog(this);
         employeeViewModel = ViewModelProviders.of(this).get(EmployeeViewModel.class);
         main_recyclerview.setLayoutManager(new LinearLayoutManager(this));
         mainAdapter = new MainAdapter(getApplicationContext());
@@ -45,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 case FAILED:
                     break;
                 case LOADING:
+                    progressDialog.show();
                     break;
                 case SUCCESS:
+                    progressDialog.dismiss();
                     mainAdapter.setEmployees(employees.getData());
                     break;
             }

@@ -22,14 +22,12 @@ public class EmployeeRepo {
     MediatorLiveData<EmployeeResponse> mediatorLiveData = new MediatorLiveData<>();
 
     public MediatorLiveData<EmployeeResponse> getEmployees(Request request) {
-//        mediatorLiveData.setValue(new EmployeeResponse(ResponseStatus.LOADING, null));
+        mediatorLiveData.setValue(new EmployeeResponse(ResponseStatus.LOADING, null));
         final LiveData<EmployeeResponse> source = LiveDataReactiveStreams.fromPublisher(
-
                 ServiceGenerator.builder(ApiInterface.class).getEmployee(request)
                         .map(this::MapResponse)
                         .onErrorReturn(this::handleError)
                         .subscribeOn(Schedulers.io()));
-
         mediatorLiveData.addSource(source, response -> {
             mediatorLiveData.setValue(response);
             mediatorLiveData.removeSource(source);

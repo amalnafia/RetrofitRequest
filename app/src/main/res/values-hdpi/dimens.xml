@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_start_15">10dp</dimen>
+    <dimen name="margin_start_30">20dp</dimen>
+    <dimen name="margin_start_39">26dp</dimen>
+
+    <dimen name="margin_top_7">7dp</dimen>
+    <dimen name="margin_top_10">10dp</dimen>
+    <dimen name="margin_top_20">18dp</dimen>
+    <dimen name="margin_top_26">26dp</dimen>
+    <dimen name="margin_top_30">28dp</dimen>
+    <dimen name="margin_top_36">30dp</dimen>
+
+
+    <dimen name="margin_end_21">0dp</dimen>
+
+    <dimen name="text_size_21">19sp</dimen>
+    <dimen name="text_size_20">18sp</dimen>
+    <dimen name="text_size_19">17sp</dimen>
+    <dimen name="text_size_17">15sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+
+</resources>
